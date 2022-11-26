@@ -33,15 +33,15 @@ function render(variables = {}) {
   if (variables.role == null) variables.role = "role";
   if (variables.country == null) variables.country = "country";
   if (variables.city == null) variables.city;
-  if (variables.socialMediaPosition == "position-left") {
-    variables.socialMediaPosition = "position-left";
+  if (variables.socialMediaPosition == "left") {
+    variables.socialMediaPosition = "left";
   } else {
-    variables.socialMediaPosition = "position-right";
+    variables.socialMediaPosition = "right";
   }
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
-;            ${cover}
+            ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name} ${variables.lastname}</h1>
           <h2>${variables.role}</h2>
@@ -68,7 +68,7 @@ window.onload = function() {
     // this is the url for the profile avatar
     avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
     // social media bar position (left or right)
-    socialMediaPosition: "position-left",
+    socialMediaPosition: "left",
     // social media usernames
     twitter: null,
     github: "alesanchezr",
